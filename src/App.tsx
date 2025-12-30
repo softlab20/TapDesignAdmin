@@ -15,6 +15,12 @@ import Coupons from "./pages/Coupons";
 import ContactUs from "./pages/ContactUs";
 import Moderators from "./pages/Moderators";
 import Roles from "./pages/Roles";
+import Users from "./pages/Users";
+import SalesReportPage from "./pages/Reports/SalesReportPage";
+import OrdersReportPage from "./pages/Reports/OrdersReportPage";
+import ProductsReportPage from "./pages/Reports/ProductsReportPage";
+import CustomersReportPage from "./pages/Reports/CustomersReportPage";
+import RevenueReportPage from "./pages/Reports/RevenueReportPage";
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const user = localStorage.getItem("user");
@@ -59,7 +65,15 @@ export default function App() {
             <Route path="/role" element={<Roles />} />
             <Route path="/products" element={<Products />} />
             <Route path="/coupons" element={<Coupons />} />
+            <Route path="/users" element={<Users />} />
             <Route path="/orders" element={<Orders />} />
+            
+            {/* Reports Routes */}
+            <Route path="/reports/sales" element={<SalesReportPage />} />
+            <Route path="/reports/orders" element={<OrdersReportPage />} />
+            <Route path="/reports/products" element={<ProductsReportPage />} />
+            <Route path="/reports/customers" element={<CustomersReportPage />} />
+            <Route path="/reports/revenue" element={<RevenueReportPage />} />
 
             {/*
             <Route path="/customers" element={<Customers />} />

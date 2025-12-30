@@ -14,6 +14,7 @@ interface RecentActivityProps {
 }
 
 const RecentActivity = ({ activities }: RecentActivityProps) => {
+     console.log("🚀 ~ RecentActivity ~ activities:", activities)
      return (
           <div className="space-y-4">
                {activities.map((activity, index) => (

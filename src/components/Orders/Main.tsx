@@ -72,10 +72,10 @@ const Main = () => {
                          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
                               {isArabic ? 'قائمة الطلبات' : 'Orders List'}
                          </h1>
-                         <Button onClick={handleCreateNew} className="flex items-center gap-2">
+                         {/* <Button onClick={handleCreateNew} className="flex items-center gap-2">
                               <FiPlus className="w-5 h-5" />
                               {isArabic ? 'إنشاء طلب جديد' : 'Create New Order'}
-                         </Button>
+                         </Button> */}
                     </div>
 
                     {/* Orders Table */}

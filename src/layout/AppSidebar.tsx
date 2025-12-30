@@ -6,10 +6,11 @@ import {
   GridIcon
 } from "../icons";
 import { useSidebar } from "../context/SidebarContext";
-import { TbGridDots } from "react-icons/tb";
+import { TbGridDots, TbReportSearch } from "react-icons/tb";
 import { MdSecurity, MdSupportAgent } from "react-icons/md";
 import { BiSolidBasket, BiSolidCoupon } from "react-icons/bi";
 import { SlBasket } from "react-icons/sl";
+import { FaUsers } from "react-icons/fa";
 
 type NavItem = {
   name: string;
@@ -42,9 +43,27 @@ const navItems: NavItem[] = [
   },
 
   {
+    name: "Reports",
+    icon: <TbReportSearch />,
+    subItems: [
+      { name: "Sales Report", path: "/reports/sales", pro: false },
+      { name: "Orders Report", path: "/reports/orders", pro: false },
+      { name: "Customers Report", path: "/reports/customers", pro: false },
+      { name: "Products Report", path: "/reports/products", pro: false },
+      { name: "Revenue Report", path: "/reports/revenue", pro: false },
+    ],
+  },
+
+  {
     icon: <BiSolidCoupon />,
     name: "Coupons",
     path: "/coupons",
+  },
+
+  {
+    icon: <FaUsers />,
+    name: "Users",
+    path: "/users",
   },
 
   // contact us

@@ -40,6 +40,10 @@ interface RecentOrder {
   total: string;
   status: string;
   created_at: string;
+  user: {
+    first_name: string;
+    last_name: string;
+  };
 }
 
 interface TopProduct {
@@ -203,8 +207,8 @@ export default function Home() {
     id: order.id,
     icon: <FiShoppingCart className="h-5 w-5 text-blue-600" />,
     iconBg: "bg-blue-100 dark:bg-blue-900/30",
-    title: `${isArabic ? 'طلب' : 'Order'} #${order.order_number}`,
-    description: `${order.customer_name} - ${formatCurrency(order.total)}`,
+    title: `${isArabic ? 'طلب' : 'Order'} #${order.id}`,
+    description: `${order?.user?.first_name} ${order?.user?.last_name} - ${formatCurrency(order.total)}`,
     time: new Date(order.created_at).toLocaleDateString(isArabic ? 'ar-EG' : 'en-US')
   }));
 

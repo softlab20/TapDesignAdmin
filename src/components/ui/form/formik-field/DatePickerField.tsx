@@ -12,6 +12,7 @@ interface DatePickerFieldProps {
      required?: boolean
      disabled?: boolean
      className?: string
+     onChange?: (date: Date | null) => void
 }
 
 export function DatePickerField({
@@ -21,6 +22,7 @@ export function DatePickerField({
      required = false,
      disabled = false,
      className,
+     onChange,
 }: DatePickerFieldProps) {
      const { t } = useTranslation()
      const [field, meta, helpers] = useField(name)
@@ -37,6 +39,11 @@ export function DatePickerField({
                helpers.setValue(formattedDate)
           } else {
                helpers.setValue("")
+          }
+          
+          // Call external onChange if provided
+          if (onChange) {
+               onChange(date)
           }
      }
 
