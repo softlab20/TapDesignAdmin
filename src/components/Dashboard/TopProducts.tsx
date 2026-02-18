@@ -77,7 +77,7 @@ const TopProducts = ({ products, loading }: TopProductsProps) => {
                               </h4>
                               <div className="flex items-center gap-3 mt-1">
                                    <span className="text-xs text-gray-600 dark:text-gray-400">
-                                        {isArabic ? 'السعر:' : 'Price:'} ${product.price}
+                                        {isArabic ? 'السعر:' : 'Price:'} {product.price} ر.س
                                    </span>
                                    <span className="text-xs text-gray-600 dark:text-gray-400">
                                         {isArabic ? 'المبيعات:' : 'Sold:'} {product.total_sold || 0}
@@ -88,7 +88,7 @@ const TopProducts = ({ products, loading }: TopProductsProps) => {
                          {/* Revenue */}
                          <div className="text-right">
                               <div className="text-sm font-bold text-green-600 dark:text-green-400">
-                                   ${product.total_revenue || '0.00'}
+                                   {product.total_revenue || '0.00'} ر.س
                               </div>
                               <div className="text-xs text-gray-500 dark:text-gray-400">
                                    {isArabic ? 'الإيرادات' : 'Revenue'}

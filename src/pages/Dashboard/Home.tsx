@@ -88,8 +88,8 @@ export default function Home() {
 
   // Format currency
   const formatCurrency = (value: number | string | undefined) => {
-    if (!value) return '$0.00';
-    return `$${Number(value).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    if (!value) return '0.00 ر.س';
+    return `${Number(value).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ر.س`;
   };
 
   // Stats configuration

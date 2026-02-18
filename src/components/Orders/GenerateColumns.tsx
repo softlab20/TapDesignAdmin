@@ -18,7 +18,7 @@ export const GenerateColumns = (
 ): ColumnDef<Order>[] => {
      const [openDropdownId, setOpenDropdownId] = useState<number | null>(null);
      const formatCurrency = (value: string | number) => {
-          return `$${Number(value).toFixed(2)}`;
+          return `${Number(value).toFixed(2)} ر.س`;
      };
 
      const formatDate = (dateString: string) => {

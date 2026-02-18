@@ -17,7 +17,7 @@ const OrderDetailsModal = ({ order, isOpen, onClose }: OrderDetailsModalProps) =
      if (!isOpen || !order) return null;
 
      const formatCurrency = (value: string | number) => {
-          return `$${Number(value).toFixed(2)}`;
+          return `${Number(value).toFixed(2)} ر.س`;
      };
 
      const formatDate = (dateString: string) => {
