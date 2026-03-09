@@ -6,8 +6,6 @@ import { GenerateColumns } from "./GenerateColumns";
 import OrderDetailsModal from "./OrderDetailsModal";
 import OrderFormModal from "./OrderFormModal";
 import IndexTable from "../ui/IndexTable";
-import Button from "../ui/button/Button";
-import { FiPlus } from "react-icons/fi";
 
 const Main = () => {
      const { i18n } = useTranslation();
@@ -34,11 +32,6 @@ const Main = () => {
 
      const handleEdit = (order: Order) => {
           setEditingOrder(order);
-          setIsFormModalOpen(true);
-     };
-
-     const handleCreateNew = () => {
-          setEditingOrder(null);
           setIsFormModalOpen(true);
      };
 

@@ -7,7 +7,7 @@ import { useState } from "react";
 import DeleteMain from "./DeleteMain";
 import { useTranslation } from "react-i18next";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { Product } from "./Types&Validation";
+import { Product } from "../Orders/Types&Validation";
 
 const GenerateColumns = ({ refetch, setModalOpen, setRow }: {
      refetch: () => void
@@ -112,10 +112,14 @@ const GenerateColumns = ({ refetch, setModalOpen, setRow }: {
                                                   {t("Edit")}
                                              </DropdownItem>
                                         </li>
-                                        <li className="border-b border-gray-200 dark:border-gray-800 my-2" />
-                                        <li>
-                                             <DeleteMain refetch={refetch} id={productId} />
-                                        </li>
+                                        {productId !== 3 && (
+                                             <>
+                                                  <li className="border-b border-gray-200 dark:border-gray-800 my-2" />
+                                                  <li>
+                                                       <DeleteMain refetch={refetch} id={productId} />
+                                                  </li>
+                                             </>
+                                        )}
                                    </ul>
                               </Dropdown>
                          </div>
