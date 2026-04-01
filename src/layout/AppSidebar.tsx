@@ -73,14 +73,14 @@ const navItems: NavItem[] = [
     path: "/contact-us",
   },
 
-  {
-    name: "Security",
-    icon: <MdSecurity />,
-    subItems: [
-      { name: "Moderators", path: "/moderators", pro: false },
-      { name: "Role & Permissions", path: "/role", pro: false },
-    ],
-  },
+  // {
+  //   name: "Security",
+  //   icon: <MdSecurity />,
+  //   subItems: [
+  //     { name: "Moderators", path: "/moderators", pro: false },
+  //     { name: "Role & Permissions", path: "/role", pro: false },
+  //   ],
+  // },
 
   // {
   //   icon: <FaUser />,
