@@ -28,8 +28,8 @@ const GenerateColumns = ({ refetch, setModalOpen, setRow }: {
                accessorKey: "web_image",
                cell: ({ row }) => (
                     <img
-                         src={row.original.web_image}
-                         alt={row.original.title_en}
+                         src={row?.original?.web_image || "https://via.placeholder.com/150"}
+                         alt={row?.original?.title_en}
                          className="w-16 h-16 object-cover rounded-lg"
                     />
                ),
